@@ -2,7 +2,7 @@ import React from 'react';
 import Button from '../../components/Button'
 import  './styles.css';
 
-function NewScheduling() {
+function NewScheduling({changePage}) {
   function handleSubmitForm(e){
     e.preventDefault()
     const schedule = {
@@ -24,7 +24,7 @@ function NewScheduling() {
       },
       body:JSON.stringify(schedule),
     })
-    .then(() => { console.log('Successfully sent token'); })
+    .then(() => { console.log('Successfully sent token'); changePage() })
     .catch((err) => { console.error('Failed to send token', err); });
     
   }

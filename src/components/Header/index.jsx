@@ -2,7 +2,7 @@ import React from 'react';
 import Button from '../Button'
 import './styles.css';
 
-function Header() {
+function Header({onClickHome,onClickSchedule}) {
   return (
     <div id='header'>
       <img 
@@ -11,11 +11,14 @@ function Header() {
         id="logo"
       />
       <div id="content-header">
-        <Button isText={true}>Inicio</Button>
-        <Button >Agendamento</Button>
+        <Button onClick={onClickHome} isText={true}>Inicio</Button>
+        <Button onClick={onClickSchedule} >Agendamento</Button>
       </div>
     </div>
+
+  
   )
 }
+
 
 export default Header;

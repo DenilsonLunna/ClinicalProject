@@ -1,0 +1,9 @@
+.banner{
+  max-width: 35% !important;
+  height:35%;
+  object-fit: contain;
+  transform: rotateY(180deg);
+  position: absolute;
+  bottom:0;
+  left:0;
+}

@@ -42,7 +42,7 @@ function EditScheduling({changePage=()=>alert('Trocar a pagina'),schedule ={
       },
       body:JSON.stringify(schedule),
     })
-    .then(() => { console.log('Successfully sent token');  changePage()})
+    .then(() => { console.log('Successfully salvou');  changePage()})
     .catch((err) => { console.error('Failed to send token', err); });
     
   }

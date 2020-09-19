@@ -2,10 +2,12 @@ import React from 'react';
 
 import './styles.css';
 
-function Button({children, props, isText, isBig}) {
+function Button({children, onClick, props, isText, isBig}) {
   return  ( 
     <button 
       {...props}
+      onClick={onClick}
+      
       id={!isText?'button':'textButton'} 
       className={isBig?"btn-big":'btn-normal'}  
       >
