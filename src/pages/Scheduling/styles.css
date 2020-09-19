@@ -1,0 +1,47 @@
+#row-schedule{
+  display:flex;
+  flex-direction:row;
+  align-items: flex-end;
+  justify-content:space-between;
+  border-bottom: #1595A3 solid 2px;
+  padding-bottom: 2px;
+}
+
+#schedule{
+  display:flex;
+  flex-direction:column;
+}
+
+#icon-date{
+  width: 30px;
+  height: 30px;
+}
+
+#container-table{
+  width: 50%;
+ 
+}
+
+#options-date{
+  display:flex;
+  flex-direction:row;
+  align-items: flex-end;
+  justify-content:flex-end;
+}
+
+#options-date button{
+  background:none;
+}
+
+#options-date button svg:hover{
+  color:#1595A3;
+  cursor:pointer;
+}
+
+#button-container{
+  margin-top: 60px;
+  display:flex; 
+  flex-direction:row; 
+  align-content:center;
+  justify-content:center;
+}
