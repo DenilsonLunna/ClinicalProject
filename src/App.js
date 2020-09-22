@@ -31,7 +31,7 @@ function App() {
       }} id="table">
        {page === 'schedules'?
         <Scheduling  
-          showEditSchedule={(item)=>{
+          setEditSchedule={(item)=>{
             setEditableSchedule(item)
             setPage('editSchedules')
          }} 
