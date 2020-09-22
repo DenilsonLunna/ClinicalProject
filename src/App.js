@@ -43,7 +43,10 @@ function App() {
          onClickNewSchedule={() => setPage('newSchedules') }
         /> : null}
 
-       {page === 'home' ? <Home /> :null}
+       {page === 'home' ? <Home changeScreen={()=> 
+            setPage('schedules')
+            
+        }/>  :null}
        {page === 'newSchedules' ? <NewScheduling changePage={()=>{
             setEditableSchedule(null)
             setPage('schedules')

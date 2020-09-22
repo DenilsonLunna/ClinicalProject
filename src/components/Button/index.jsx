@@ -2,7 +2,7 @@ import React from 'react';
 
 import './styles.css';
 
-function Button({children, onClick, props, isText, isBig}) {
+function Button({children, onClick, props, isText, isBig, isSmall}) {
   return  ( 
     <button 
       {...props}
@@ -10,6 +10,7 @@ function Button({children, onClick, props, isText, isBig}) {
       
       id={!isText?'button':'textButton'} 
       className={isBig?"btn-big":'btn-normal'}  
+      
       >
        {children}
     </button>
