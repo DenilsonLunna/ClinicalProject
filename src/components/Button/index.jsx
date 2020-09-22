@@ -2,7 +2,7 @@ import React from 'react';
 
 import './styles.css';
 
-function Button({children, onClick, props, isText, isBig, isSmall}) {
+function Button({children, onClick, props, isText, isBig}) {
   return  ( 
     <button 
       {...props}

@@ -35,17 +35,14 @@ function Scheduling({onClickNewSchedule, showEditSchedule, setEditSchedule}) {
 
   return (
     <div id='container-table'>
-      {data.map(item => {
-        
-        return (
+      {data.map(item =>  (
           <Item 
             item={item} 
             showEditSchedule={showEditSchedule} 
             setEditSchedule={setEditSchedule} 
-            deleteSchedule={deleteSchedule} />
-          
-        )
-      })}
+            deleteSchedule={deleteSchedule} 
+          />
+      ))}
      
         <div id='button-container'>
           <Button onClick={()=>{onClickNewSchedule()}} isBig>Novo Agendamento</Button>

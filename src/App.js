@@ -6,13 +6,12 @@ import Footer from './components/Footer'
 import Scheduling from './pages/Scheduling'
 import NewScheduling from './pages/NewScheduling'
 import EditScheduling from './pages/EditScheduling'
-import ShowScheduling from './pages/ShowScheduling'
+// import ShowScheduling from './pages/ShowScheduling'
 import Home from './pages/Home'
 
 function App() {
   const [page, setPage]= useState('home')
   const [editableSchedule, setEditableSchedule]= useState(null)
-
 
   return (
      
@@ -34,16 +33,13 @@ function App() {
         <Scheduling  
           showEditSchedule={(item)=>{
             setEditableSchedule(item)
-            setPage('showSchedules')
-         }} 
-          setEditSchedule={(item)=>{
-            setEditableSchedule(item)
             setPage('editSchedules')
          }} 
          onClickNewSchedule={() => setPage('newSchedules') }
         /> : null}
 
-       {page === 'home' ? <Home changeScreen={()=> 
+       {page === 'home' ? <Home 
+        changeScreen={()=> 
             setPage('schedules')
             
         }/>  :null}
@@ -58,12 +54,7 @@ function App() {
             setPage('schedules')
           }} 
           schedule={editableSchedule} /> :null}
-       {page === 'showSchedules' && editableSchedule ? 
-        <ShowScheduling 
-         changePage={()=>{
-            setPage('editSchedules')
-          }} 
-          schedule={editableSchedule} /> :null}
+       
       </div>
      
       <Footer/>

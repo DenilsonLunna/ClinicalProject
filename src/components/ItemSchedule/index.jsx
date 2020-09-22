@@ -23,7 +23,9 @@ const ItemSchedule = ({item, setEditSchedule, deleteSchedule }) => {
                     <span id="age"><b>Idade: </b>{item.age}</span>
                     <span id="doctor"><b>Doctor: </b>{item.doctor}</span>
                         <span id="phone"><b>Contato: </b> <FaWhatsapp/> 
-                            <a href={`https://api.whatsapp.com/send?phone=55${item.phone}&text=Olá, só confirmando a consulta para hoje`} target="_blank" rel="noopener noreferrer">
+                            <a 
+                                href={`https://api.whatsapp.com/send?phone=55${item.phone}&text=Olá, só confirmando a consulta para hoje`} 
+                                target="_blank" rel="noopener noreferrer">
                                 {item.phone}
                             </a>
                         </span>

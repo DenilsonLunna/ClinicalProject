@@ -2,15 +2,7 @@ import React, {useState} from 'react';
 import Button from '../../components/Button'
 import  './styles.css';
 
-function EditScheduling({changePage=()=>alert('Trocar a pagina'),schedule ={
-  "name": "Joao Denilson Nery Sousa",
-  "age": "22",
-  "doctor": "Max",
-  "phone": "55884679",
-  "symptoms": "dor no dedo",
-  "date": "2020-09-08T19:01",
-  "id": 1
-}}) {
+function EditScheduling({changePage,schedule}) {
 
   const [scheduleState, setScheduleState] = useState(schedule)
   
@@ -42,8 +34,8 @@ function EditScheduling({changePage=()=>alert('Trocar a pagina'),schedule ={
       },
       body:JSON.stringify(schedule),
     })
-    .then(() => { console.log('Successfully salvou');  changePage()})
-    .catch((err) => { console.error('Failed to send token', err); });
+    .then(() => { console.log('Successfully');  changePage()})
+    .catch((err) => { console.error('Failed', err); });
     
   }
   return (
