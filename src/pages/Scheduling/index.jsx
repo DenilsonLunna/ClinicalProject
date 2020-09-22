@@ -3,7 +3,7 @@ import Button from '../../components/Button'
 import Item from '../../components/ItemSchedule'
 import './styles.css';
 
-function Scheduling({onClickNewSchedule, showEditSchedule, setEditSchedule}) {
+function Scheduling({onClickNewSchedule,  setEditSchedule}) {
   const [data, setData]=useState([])
 
   useEffect(()=>{
@@ -35,17 +35,13 @@ function Scheduling({onClickNewSchedule, showEditSchedule, setEditSchedule}) {
 
   return (
     <div id='container-table'>
-      {data.map(item => {
-        
-        return (
+      {data.map(item =>  (
           <Item 
             item={item} 
-            showEditSchedule={showEditSchedule} 
             setEditSchedule={setEditSchedule} 
-            deleteSchedule={deleteSchedule} />
-          
-        )
-      })}
+            deleteSchedule={deleteSchedule} 
+          />
+      ))}
      
         <div id='button-container'>
           <Button onClick={()=>{onClickNewSchedule()}} isBig>Novo Agendamento</Button>

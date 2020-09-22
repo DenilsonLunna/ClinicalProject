@@ -15,7 +15,6 @@ function NewScheduling({changePage}) {
      
     }
     
-    console.log(schedule);
     fetch('http://localhost:3333/scheduling',
     {
       method: 'POST',
@@ -24,8 +23,8 @@ function NewScheduling({changePage}) {
       },
       body:JSON.stringify(schedule),
     })
-    .then(() => { console.log('Successfully sent token'); changePage() })
-    .catch((err) => { console.error('Failed to send token', err); });
+    .then(() => { console.log('Successfully'); changePage() })
+    .catch((err) => { console.error('Failed', err); });
     
   }
   return (
