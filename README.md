@@ -20,3 +20,5 @@ ou
 **João Denilson Nery Sousa**
 
 💻💻💻💻
+
+![logo](./src/assets/logo.png)
