@@ -23,6 +23,10 @@ ou
 
 ![logo](./src/assets/logo.png)
 
-# Create new Schedule
+# Crie novo agendamento
 
-![logo](./src/assets/create.png)
+![agendamento](./src/assets/create.png)
+
+# Veja os agendamentos
+
+![logo](./src/assets/list.png)
